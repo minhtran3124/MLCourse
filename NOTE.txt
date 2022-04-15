@@ -1,0 +1,6 @@
+source $HOME/miniconda3/bin/activate
+conda --help
+
+
+conda activate machinelearning_env
+
