@@ -118,7 +118,36 @@
 
 ### Moments
 
-1. Mean
-2. Variance
-3. Skew
-4. Kurtosis
+- The first moment is Mean
+- The second moment is Variance
+- The third moment is Skew: which measures how lopsided the distribution is
+- The last moment is Kurtosis: which is the measure of how sharp is the peak of the graph
+
+#### Skew
+
+- Skewness = (Mean - Mode) / Standard Deviation
+- Mode = 3(Median) - 2(Mean)
+- Cases
+    - No Skew: when Mean == Median == Mode
+    - Positive Skew: when Mean > Median > Mode
+    - Negative Skew: when Mean < Median < Mode
+
+#### Kurtosis
+
+- Types
+    - Leptokurtic: Distributions greater than 3
+    - MesoKurtic: A normal distribution has a kurtosis of 3
+    - Platykurtic: less than 3
+
+- Excess Kurtosis = Kurtosis - 3
+    - Excess Kurtosis for Normal Distribution = 3–3 = 0
+    - The lowest value of Excess Kurtosis is when Kurtosis is 1 = 1–3 = -2
+
+    ![](/images/Kurtosis)
+
+- The horizontal push or pull distortion of a normal distribution curve gets captured by the Skewness measure and the vertical push or pull distortion gets captured by the Kurtosis measure. Also, it is the impact of outliers that dominate the kurtosis effect which has its roots of proof sitting in the fourth-order moment-based formula.
+
+***Links***
+- https://medium.com/analytics-vidhya/moment-in-statistics-9407438c083b
+- https://towardsdatascience.com/skewness-kurtosis-simplified-1338e094fc85
+- 
