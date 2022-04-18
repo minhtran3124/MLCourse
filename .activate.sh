@@ -1,37 +1,32 @@
-export LOCAL_VENV="machinelearning_env"
+export LOCAL_VENV="ml_course_env"
 
 
-# function init_env() {
-#     echo "===> Creating virtualenv $LOCAL_VENV ..."
-#     python3 -m venv $LOCAL_VENV
-# }
+function init_env() {
+    echo "===> Creating env ..."
+    python -m venv --name $LOCAL_VENV
+}
 
 function activate_env() {
-    echo -e "\n"
     echo "===> Active env..."
-    conda activate $LOCAL_VENV
+    source $LOCAL_VENV/bin/activate
 }
 
 function install_required_tools() {
-    echo -e "\n"
     echo "===> Installing required tools ..."
     pip install pip-tools
 }
 
 function complie_requirements() {
-    echo -e "\n"
     echo "===> Compling requirements ..."
     pip-compile requirements.in
 }
 
 function install_packages() {
-    echo -e "\n"
     echo "===> Installing requirements ..."
     pip install -r requirements.txt
 }
 
 function run_setup() {
-    echo -e "\n"
     echo "===> Running setup ..."
 
     init_env
@@ -41,4 +36,8 @@ function run_setup() {
     install_packages
 }
 
-activate_env()
+function start_notebook() {
+    jupyter notebook
+}
+
+activate_env
